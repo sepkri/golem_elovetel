@@ -1,0 +1,171 @@
+@font-face {
+  font-family: 'AzeretThin';
+  src:  url('font/Azeret-Thin.woff') format('woff');
+}
+@font-face {
+  font-family: 'AzeretRegular';
+  src:  url('font/Azeret-Regular.woff') format('woff');;
+}
+
+@font-face {
+  font-family: 'AzeretBlack';
+  src:  url('font/Azeret-Black.woff') format('woff');;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.004em;
+  color: white;
+
+}
+
+html,
+body {
+  background: black;
+  overflow: hidden;
+  font-family: "AzeretThin";
+  
+  
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  border-bottom: 1px solid white;
+  
+}
+
+.navbar-item {
+  padding: 2em;
+}
+
+
+
+.site-logo img{
+  width: 400px;
+}
+
+.menu-cart {
+  font-family: "AzeretRegular";
+  font-weight: 400;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.wrapper {
+  display: flex;
+  height: 100%;
+  background: black;
+}
+
+.golem-img {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 2;
+  height: 100%;
+}
+
+.golem-img img {
+  position: relative;
+  width: 50%;
+  transition: transform 1s ease 0s;
+
+}
+
+
+.golem-img img:hover{
+  transform: scale(1.05);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  flex: 1;
+  border-left: 1px solid white;
+  padding: 3em;
+}
+
+.info-text h1{
+  padding-bottom: 2em;
+}
+.info-text h3{
+  padding-bottom: 1em;
+}
+
+.info-text h5{
+  text-align: justify;
+}
+
+
+.register-form{
+  padding-bottom: 5vh;
+}
+
+.input-group {
+	position: relative;
+	width: 80%;
+  padding: 2px;
+  
+}
+
+.input-group input {
+  font-family: "AzeretThin";
+	width: 100%;
+	border: 2px solid rgb(255, 255, 255, .1);
+	padding: 1rem;
+}
+
+
+
+
+
+:is(.input-group > input:focus, .input-group > input:not(:placeholder-shown)) {
+	background-color: var(--color-input-background);
+	border-color: var(--color-border-focus);
+}
+
+
+
+
+
+
+
+.register-form button {
+  
+	width: 60%;
+  margin: 1rem 0;
+  padding: 10px 0;
+	justify-content: space-between;
+	align-items: center;
+	background: white;
+  color: black;
+  border: solid black 1px;
+	
+	cursor: pointer;
+	transition: .2s ease-in-out;
+}
+
+.register-form button:hover {
+  
+	background: black;
+  color: white;
+  border: solid white 1px;
+}
+
+
+
+
