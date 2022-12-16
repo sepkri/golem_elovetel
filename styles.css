@@ -1,15 +1,18 @@
 @font-face {
   font-family: 'AzeretThin';
-  src:  url('font/Azeret-Thin.woff') format('woff');
+  src: url('font/Azeret-Thin.woff') format('woff');
 }
+
 @font-face {
   font-family: 'AzeretRegular';
-  src:  url('font/Azeret-Regular.woff') format('woff');;
+  src: url('font/Azeret-Regular.woff') format('woff');
+  ;
 }
 
 @font-face {
   font-family: 'AzeretBlack';
-  src:  url('font/Azeret-Black.woff') format('woff');;
+  src: url('font/Azeret-Black.woff') format('woff');
+  ;
 }
 
 * {
@@ -18,7 +21,6 @@
   box-sizing: border-box;
   letter-spacing: 0.004em;
   color: white;
-
 }
 
 html,
@@ -26,8 +28,6 @@ body {
   background: black;
   overflow: hidden;
   font-family: "AzeretThin";
-  
-  
 }
 
 .container {
@@ -44,23 +44,19 @@ body {
   align-items: center;
   background: black;
   border-bottom: 1px solid white;
-  
 }
 
 .navbar-item {
   padding: 2em;
 }
 
-
-
-.site-logo img{
+.site-logo img {
   width: 400px;
 }
 
 .menu-cart {
   font-family: "AzeretRegular";
   font-weight: 400;
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .wrapper {
@@ -75,18 +71,13 @@ body {
   align-items: flex-end;
   flex: 2;
   height: 100%;
+  border-bottom: solid 1px white;
 }
 
 .golem-img img {
   position: relative;
-  width: 50%;
+  height: 80vh;
   transition: transform 1s ease 0s;
-
-}
-
-
-.golem-img img:hover{
-  transform: scale(1.05);
 }
 
 .info {
@@ -97,75 +88,105 @@ body {
   flex: 1;
   border-left: 1px solid white;
   padding: 3em;
+  overflow: visible;
 }
 
-.info-text h1{
+.info-text h1 {
   padding-bottom: 2em;
 }
-.info-text h3{
+
+.info-text h3 {
   padding-bottom: 1em;
 }
 
-.info-text h5{
+.info-text h5 {
   text-align: justify;
 }
 
-
-.register-form{
-  padding-bottom: 5vh;
+.register-form {
+  padding-top: 20px;
+  padding-bottom: 0vh;
 }
 
 .input-group {
-	position: relative;
-	width: 80%;
+  position: relative;
+  width: 80%;
   padding: 2px;
-  
 }
 
 .input-group input {
   font-family: "AzeretThin";
-	width: 100%;
-	border: 2px solid rgb(255, 255, 255, .1);
-	padding: 1rem;
+  width: 100%;
+  border: 2px solid rgb(255, 255, 255, .1);
+  padding: 1rem;
 }
-
-
-
-
 
 :is(.input-group > input:focus, .input-group > input:not(:placeholder-shown)) {
-	background-color: var(--color-input-background);
-	border-color: var(--color-border-focus);
+  background-color: var(--color-input-background);
+  border-color: var(--color-border-focus);
 }
 
-
-
-
-
-
-
 .register-form button {
-  
-	width: 60%;
+
+  width: 60%;
   margin: 1rem 0;
   padding: 10px 0;
-	justify-content: space-between;
-	align-items: center;
-	background: white;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
   color: black;
   border: solid black 1px;
-	
-	cursor: pointer;
-	transition: .2s ease-in-out;
+  cursor: pointer;
+  transition: .2s ease-in-out;
 }
 
 .register-form button:hover {
-  
-	background: black;
+
+  background: black;
   color: white;
   border: solid white 1px;
 }
 
+.social-media-icon img{
+  
+  margin: 5px;
+  float: right;
+  max-width: 3vh;
+}
 
 
 
+@media (max-width: 1200px) {
+
+  .info {
+    padding: 10px;
+  }
+}
+
+
+@media (max-width: 800px) {
+
+  .site-logo img {
+    width: 200px;
+    padding: 1rem;
+  }
+
+  .navbar-item {
+    position: inherit;
+    font-size: 10px;
+    
+  }
+
+  .wrapper {
+    display: grid;
+  }
+
+  body {
+    overflow-y: visible;
+  }
+
+  .info {
+    padding: 5vw;
+    border-left: none;
+  }
+}

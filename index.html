@@ -1,70 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gólem Fesztivál</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="navbar">
-        <div class="navbar-item">
-          2023 07. 21-23. <br>
-          ROBINSON-SZIGETEK
-        </div>
-        <div class="site-logo"><a href=""><img src="logo_transparent.png" alt=""></a></div>
-        <div class="navbar-item">
-          6. GÓLEM FESZTIVÁL
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gólem Fesztivál</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div class="navbar-item">
+        2023 07. 21-23. <br>
+        ROBINSON-SZIGETEK
       </div>
-      
-      <div class="wrapper">
-        <div class="golem-img">
-          <img src="golem_test_transparent.png" alt="" />
+      <div class="site-logo"><a href=""><img src="assets/logo_transparent.png" alt=""></a></div>
+      <div class="navbar-item">
+        6. GÓLEM FESZTIVÁL
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="golem-img">
+        <img src="assets/golem_test_transparent.png" alt="" />
+      </div>
+
+      <div class="info">
+        <div class="info-text">
+          <h1>KÖZÖSSÉGI ELŐVÉTELES BÉRLETEK</h1>
+          <h3>IRATKOZZ FEL A HÍRLEVÉLRE</h3>
+
+          <h5>A gólem 2023-ban is megnyitja kapuit, mi viszont még nem nyitottuk
+            meg annyira kreatív kapuinkat, hogy kitaláljunk ide valami frappáns szöveget.
+            A lényeg az, hogy amennyiben feliratkoztok a hírlevelünkre,
+            akkor a megadott e-mail címre küldünk egy tokent, amivel elsőként
+            vásárolhatjátok meg szuper extra giga mega early bird karácsonyi
+            bérleteinket! Csak az első 50 kupont lehet beváltani, úgyhogy érdemes sietni.
+          </h5>
         </div>
 
-        <div class="info">
-          <div class="info-text"><h1>KÖZÖSSÉGI ELŐVÉTELES BÉRLETEK</h1>
-            <h3>IRATKOZZ FEL A HÍRLEVÉLRE</h3>
-  
-            <h5>A gólem 2023-ban is megnyitja kapuit, mi viszont még nem nyitottuk 
-              meg annyira kreatív kapuinkat, hogy kitaláljunk ide valami frappáns szöveget.
-              A lényeg az, hogy amennyiben feliratkoztok a hírlevelünkre, 
-              akkor a megadott e-mail címre küldünk egy tokent, amivel elsőként 
-              vásárolhatjátok meg szuper extra giga mega early bird karácsonyi 
-              bérleteinket! Csak az első 50 kupont lehet beváltani, úgyhogy érdemes sietni.
-             </h5></div>
+        <div>
 
-<div>
+          <form class="register-form">
 
-  <form class="register-form">
+            <div class="input-group">
 
-    <div class="input-group">
+              <input type="email" placeholder="E-MAIL">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-group">
+              <input type="name" placeholder="KEDVES NEVED" pattern=".{6,}">
+              <i class="fa-solid fa-lock"></i>
 
-    <input type="email" placeholder="E-MAIL">
-    <i class="fa-solid fa-user"></i>
-  </div>
-  <div class="input-group">
-    <input type="name" placeholder="KEDVES NEVED" pattern=".{6,}">
-    <i class="fa-solid fa-lock"></i>
+              <button type="submit">
+                FELIRATKOZÁS
+              </button>
 
-    <button type="submit">
-      FELIRATKOZÁS
-    </button>
-  
-</div>
+            </div>
+        </div>
+        <div class="social-media-icon">
           
-          
+          <a href="https://www.instagram.com/golemfesztival/"><img src="assets/INSTA_icon.svg" alt=""></a>
+          <a href="https://www.facebook.com/golemfeszt"><img src="assets/FB_icon.svg" alt=""></a>
         </div>
       </div>
     </div>
     <script>
       gsap.from(".navbar", 2, { y: -100, ease: Expo.easeInOut });
-      gsap.from(".info", 4, { x: 600, ease: Expo.easeInOut });
-      gsap.from(".golem-img", 4, { y: 600, ease: Expo.easeInOut });
+      gsap.from(".info", 4, { y: 800, ease: Expo.easeInOut });
+      gsap.from(".golem-img", 4, { x: -800, ease: Expo.easeInOut });
     </script>
-  </body>
+</body>
+
 </html>
