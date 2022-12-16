@@ -188,5 +188,6 @@ body {
   .info {
     padding: 5vw;
     border-left: none;
+    max-height: 55vh;
   }
 }
