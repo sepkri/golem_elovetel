@@ -166,6 +166,10 @@ body {
 
 @media (max-width: 800px) {
 
+  body{
+    height: 100%;
+  }
+
   .site-logo img {
     width: 200px;
     padding: 1rem;
@@ -179,6 +183,8 @@ body {
 
   .wrapper {
     display: grid;
+    height: 155vh;
+    
   }
 
   body {
