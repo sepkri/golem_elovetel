@@ -167,7 +167,7 @@ body {
 @media (max-width: 800px) {
 
   body{
-    height: 240vh;
+    height: 200vh;
     overflow-y: visible;
   }
 
@@ -184,7 +184,7 @@ body {
 
   .wrapper {
     display: grid;
-    height: 220vh;
+    
     overflow-y: visible;
   }
 
