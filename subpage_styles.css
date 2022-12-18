@@ -1,0 +1,30 @@
+
+.text-wrapper{
+  
+    background-color: black;
+
+padding: 5vw;
+}
+
+.text-wrapper h3{
+    border: solid white 1px;
+    color: white;
+    padding: 10px;
+    margin: 20px 0 0 0;
+}
+
+.text-wrapper p, h2{
+    font-weight: 800;
+    color: black;
+    background-color: white;
+    padding: 20px;
+}
+
+.text-wrapper h2{
+    font-style: italic;
+    border: solid 1px white;
+font-size: 1rem;
+    padding-left: 30px;
+    background-color: black;
+    color: white;
+}

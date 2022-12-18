@@ -23,11 +23,11 @@
   color: white;
 }
 
-html,
+
 body {
   background: black;
-  overflow: hidden;
   font-family: "AzeretThin";
+
 }
 
 .container {
@@ -35,6 +35,8 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-y: hidden;
+
 }
 
 .navbar {
@@ -63,6 +65,7 @@ body {
   display: flex;
   height: 100%;
   background: black;
+
 }
 
 .golem-img {
@@ -106,12 +109,14 @@ body {
 .register-form {
   padding-top: 20px;
   padding-bottom: 0vh;
+
 }
 
 .input-group {
   position: relative;
   width: 80%;
   padding: 2px;
+
 }
 
 .input-group input {
@@ -122,8 +127,15 @@ body {
 }
 
 :is(.input-group > input:focus, .input-group > input:not(:placeholder-shown)) {
-  background-color: var(--color-input-background);
-  border-color: var(--color-border-focus);
+  background-color: black;
+  color: white;
+
+}
+
+.input-group input::placeholder {
+
+
+  color: gray;
 }
 
 .register-form button {
@@ -147,14 +159,31 @@ body {
   border: solid white 1px;
 }
 
-.social-media-icon img{
-  
+.social-media-icon img {
+
   margin: 5px;
-  float: right;
-  max-width: 3vh;
+  width: 3vh;
 }
 
+footer {
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+footer a {
+  padding: 0 10px;
+  float: left;
+  text-decoration: none;
+  color: #474747;
+  transition: all 0.5s ease;
+}
+
+footer a:hover {
+  color: white;
+}
 
 @media (max-width: 1200px) {
 
@@ -166,8 +195,8 @@ body {
 
 @media (max-width: 800px) {
 
-  body{
-    height: 200vh;
+  body {
+    height: 170vh;
     overflow-y: visible;
   }
 
@@ -179,16 +208,26 @@ body {
   .navbar-item {
     position: inherit;
     font-size: 10px;
-    
+
+  }
+
+  .container {
+    overflow-y: visible;
   }
 
   .wrapper {
     display: grid;
-    
+
     overflow-y: visible;
   }
 
-  
+  .golem-img {
+    height: 70vh;
+  }
+
+  .golem-img img {
+    height: 70vh;
+  }
 
   .info {
     padding: 5vw;
