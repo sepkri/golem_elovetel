@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'AzeretThin';
+    src: url('font/Azeret-Thin.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'AzeretRegular';
+    src: url('font/Azeret-Regular.woff') format('woff');
+    ;
+  }
+  
+  @font-face {
+    font-family: 'AzeretBlack';
+    src: url('font/Azeret-Black.woff') format('woff');
+    ;
+  }
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'AzeretThin';
+    
+}
+
+body, html{
+   
+    color: #a0a0a0;
+    text-decoration: none;
+}
+
+
+.logo img{
+    top: 3.5%;
+    left: 5%;
+    position: fixed;
+    width: 200px;
+}
+
+.date{
+position: fixed;
+left: 5%;
+top: 15%;
+padding-left: 15px;
+}
+
+.date h4{
+    padding-bottom: 1vh;
+}
+
+.jegy_button{
+    text-align: center;
+    text-decoration: none;
+    position: fixed;
+    bottom: 20%;
+    right: 10%;
+    padding: 20px 30px;
+    color:white;
+    background-color: #ffffff30;
+    transition: all .5s ease;
+    
+    font-size: 12px;
+}
+
+.jegy_button h2{
+    font-family: 'Azeretregular';
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+
+
+}
+
+.jegy_button:hover{
+    background-color: #ffffff;
+    color: black;
+
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  
+
+
+.webgl{
+    z-index: -1;
+   position: fixed;
+}
+
+
+
+
+
+
+
+a,button{
+    cursor: pointer;
+    color: #a0a0a0;
+
+}
+
+nav{
+    z-index: 30;
+
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    width: 250px;
+}
+
+.navigation{
+    overflow-y: hidden;
+    position: fixed;
+    right: -500px;
+    width: 250px;
+    height: 100%;
+    transition: .5s;
+    background-color: black;
+    border-left: solid 1px #a0a0a0;
+
+}
+
+.navigation ul li{
+    color: #a0a0a0;
+    text-align: right;
+    list-style-type: none;
+    font-size: 1.5em;
+    padding: 20px 30px;
+    
+}
+
+.navigation ul li a{
+    transition: all .5s ease;
+}
+
+.navigation ul li a:hover{
+color: white;
+
+
+
+}
+
+.hamburger, .bar{
+    position: fixed;
+}
+
+.hamburger{
+    display: block;
+    top: 5%;
+    right: 5%;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    border: 0;
+    background: 0 0;
+}
+
+.bar{
+    top: 3px;
+    background: #a0a0a0;
+    width: 100%;
+    height: 2px;
+    transition: all .3s ease-in;
+}
+
+#bar2{
+    top: 11px;
+}
+
+#bar3{
+    top: 19px;
+}
+
+.navigation.active{
+    right: 0;
+}
+
+.hamburger.open #bar1{
+    background-color: #a0a0a0;
+    transform: rotate(45deg) translate(6px, 5px);
+}
+
+.hamburger.open #bar2{
+    background-color: transparent;
+}
+
+.hamburger.open #bar3{
+    background-color: #a0a0a0;
+    transform: rotate(-45deg) translate(6px, -5px);
+}
+
+.panels {
+    position: absolute;
+    top: 85vh;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    transition: all 0.6s ease-in-out;
+    border-top: solid 1px #a0a0a0;
+    
+  }
+  
+  .panels span {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    transition: all 0.6s;
+    
+
+  }
+  
+  .panels span:nth-child(1) {
+    background-image: url(/assets/golem23_1.jpg);
+  }
+  
+  .panels span:nth-child(2) {
+    background-image: url(/assets/golem23_3.jpg);
+  }
+  
+  .panels span:nth-child(3) {
+    background-image: url(/assets/golem23_2.jpg);
+  }
+  
+ 
+  
+  .panels span::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.6s ease-in-out;
+  }
+  
+  .panels span:hover {
+    width: 200%;
+    filter: grayscale(0%);
+  }
+  
+  .panels span:hover::after {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
