@@ -24,7 +24,7 @@ function initMaterial() {
 
     const loader = new THREE.TextureLoader();
     const imgTexture = loader.load( 'model/color.png' );
-    const thicknessTexture = loader.load( 'model/thickness.png' );
+    const thicknessTexture = loader.load( 'model/thickness2.png' );
 
     const displacementTexture = loader.load( 'model/white.png' );
 
@@ -50,15 +50,15 @@ function initMaterial() {
     uniforms['map'].value = imgTexture;
 
     uniforms[ 'diffuse' ].value = new THREE.Vector3( 0.024, 0.107, 0.165 );
-    uniforms[ 'shininess' ].value = 600;
+    uniforms[ 'shininess' ].value = 200;
     uniforms[ 'thicknessMap' ].value = thicknessTexture;
     uniforms[ 'thicknessColor' ].value = new THREE.Vector3( 0.172, 0.261, 0.128);
-    uniforms[ 'thicknessDistortion' ].value = 0.2;
+    uniforms[ 'thicknessDistortion' ].value = 0.;
     uniforms[ 'thicknessAmbient' ].value = 9.6;
     uniforms[ 'thicknessAttenuation' ].value = .4;
     uniforms[ 'thicknessPower' ].value =1;
-    uniforms[ 'thicknessScale' ].value = 30;
-    uniforms[ 'opacity' ].value = .5;
+    uniforms[ 'thicknessScale' ].value = 6;
+    
     
 
    
@@ -81,7 +81,7 @@ function initMaterial() {
     // LOADER
 
     const loaderGlbf = new GLTFLoader();
-    loaderGlbf.load( 'model/mellszobor_weblaphoz.glb', function ( object ) {
+    loaderGlbf.load( 'model/mellszobor_weblaphoz2.glb', function ( object ) {
 
         model = object.scene.children[0];
         model.position.set( 0, .5, 0 );
@@ -110,7 +110,7 @@ const sizes = {
 
 const directionalLight = new THREE.DirectionalLight( 0xffffff, 0.3 );
 
-
+directionalLight.position.set( 0, 0.01, 0 );
 scene.add( directionalLight );
 
 
